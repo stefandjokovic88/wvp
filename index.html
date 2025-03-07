@@ -4,14 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WVP</title>
     <link
       rel="shortcut icon"
-      href="images/favicon-32x32.png"
+      href="https://www.wvpfondovi.rs/sites/all/themes/WVP/images/logo.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="script.js"></script>
-    <title>Home Page</title>
+    <script src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("GJ6wN-QN-Pmo4S04r");
+      })();
+    </script>
   </head>
   <body>
     <div class="main">
@@ -21,42 +30,67 @@
             src="https://www.wvpfondovi.rs/sites/all/themes/WVP/images/logo.png"
             alt="WVP Fund Management"
           />
-          <div class="caption">Learn to code by watching others</div>
-          <div class="text">
-            See how experienced developers solve problems in real-time. Watching
-            scripted tutorials is great, but understanding how developers think
-            is invaluable.
-          </div>
+          <div class="caption">Konstantin Kostić</div>
+          <div class="text">Podaci o klijentu</div>
         </div>
-        <div class="right">
-          <div class="commercial">
-            <p>Try it free 7 days<span> then $20/mo. thereafter</span></p>
+        <div class="right form">
+          <div class="form-control">
+            <input type="text" id="firstname" placeholder="Ime" />
+            <small>Error Message</small>
           </div>
-
-          <form id="form" class="form">
-            <div class="form-control">
-              <input type="text" id="firstname" placeholder="First Name" />
-              <small>Error Message</small>
-            </div>
-            <div class="form-control">
-              <input type="text" id="lastname" placeholder="Last Name" />
-              <small>Error Message</small>
-            </div>
-            <div class="form-control">
-              <input type="text" id="email" placeholder="Email Address" />
-              <small>Error Message</small>
-            </div>
-            <div class="form-control">
-              <input type="password" id="password" placeholder="Password" />
-              <small>Error Message</small>
-            </div>
-
-            <button id="btn">Claim your free trial</button>
-            <p>
-              By clicking the button, you are agreeing to our
-              <span>Terms and Services</span>
-            </p>
-          </form>
+          <div class="form-control">
+            <input type="text" id="lastname" placeholder="Prezime" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="text" id="email" placeholder="Email" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="number" id="mobile" placeholder="Broj telefona" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="text" id="profession" placeholder="Zanimanje" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="number" id="height" placeholder="Visina" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="number" id="weight" placeholder="Težina" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input
+              type="text"
+              id="healthrecord"
+              placeholder="Zdravstveni karton"
+            />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="number" id="idnumber" placeholder="JMBG" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="number" id="idcard" placeholder="Broj lične karte" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="text" id="city" placeholder="Grad" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <input type="number" id="accountnumber" placeholder="Broj računa" />
+            <small>Error Message</small>
+          </div>
+          <div class="form-control">
+            <textarea id="notice" rows="5" placeholder="Napomena"></textarea>
+            <small>Error Message</small>
+          </div>
+          <button onclick="sendMail()">Pošalji</button>
         </div>
       </div>
     </div>
